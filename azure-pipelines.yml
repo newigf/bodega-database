@@ -1,0 +1,9 @@
+trigger:
+  - main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - script: docker build -t bodega-database:$(Build.BuildId) .
+    displayName: Construir la imagen Docker
